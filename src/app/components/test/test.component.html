@@ -1,0 +1,54 @@
+
+
+
+<div class="container">
+    <h3 class="m-3 text-center">Books' List</h3>
+    <div  *ngIf="bookList != ''">
+        <div *ngFor="let book of bookList">
+            <div style="display: flex;justify-content: space-between;">
+                <div>
+                    <p>Title: <b>"{{book.title}}"</b></p>
+                    <p>Author: <b>{{book.author}}</b></p>
+                    <p>Pages: <b>{{book.pages}}</b></p>
+                    
+                </div>
+                <div>
+                
+                    <button class="m-1 btn btn-info" (click)="goLook(book.id)">Look</button>
+                    <button class="m-1 btn btn-warning" (click)="goEdit(book.id)">Edit</button>
+                <button class="m-1 btn btn-danger" (click)="deleteBook(book.id)">Delete</button>
+                
+                </div>
+            </div>
+            
+            <hr>
+        </div>
+    </div>
+    
+
+    <div *ngIf="bookList == ''">
+        <p>No Hay Libros</p>
+    </div>
+    
+</div>
+
+<!-- <div>
+    <form [formGroup]="form" class="col-6">
+            <div class="m-3">
+                <label for="">Title</label>
+                <input class="form-control" type="text" formControlName="title">
+            </div>
+            <div class="m-3">
+                <label for="">Author</label>
+                <input class="form-control" type="text" formControlName="author">
+            </div>
+            <div class="m-3">
+                <label for="">Pages</label>
+                <input class="form-control" type="text" formControlName="pages">
+            </div>
+
+            <div class="m-3t text-center">
+                <button class="btn btn-success" (click)="sendNewBook()">Send</button>
+            </div>
+    </form>
+</div> -->

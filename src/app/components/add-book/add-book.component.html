@@ -1,0 +1,18 @@
+<form [formGroup]="form" class="col-6">
+            <div class="m-3">
+                <label for="">Title</label>
+                <input class="form-control" type="text" formControlName="title">
+            </div>
+            <div class="m-3">
+                <label for="">Author</label>
+                <input class="form-control" type="text" formControlName="author">
+            </div>
+            <div class="m-3">
+                <label for="">Pages</label>
+                <input class="form-control" type="text" formControlName="pages">
+            </div>
+
+            <div class="m-3t text-center">
+                <button class="btn btn-success" (click)="sendNewBook()">Send</button>
+            </div>
+    </form>

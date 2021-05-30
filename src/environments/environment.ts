@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: "http://tescorza-001-site1.itempurl.com/api/"
+  // apiUrl: "https://localhost:44362/api/"
 };
 
 /*
